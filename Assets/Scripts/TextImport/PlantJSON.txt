@@ -1,0 +1,854 @@
+{
+ "_PlantData":[
+	{
+		"Name": "Rose",
+		"Likes": "fuck",
+		"Dislikes": "ugly",
+		"GoodResponses": "Hmm, adequate.",
+		"BadResponses": "How DARE you! My beauty is NOT to be toyed with!",
+		"Description": "Rose are the crown jewel of the garden! These flowers are hard to please – they respect someone who can take them to task and earn their respect.",
+		"Wants": "To be #1, wants to meet their match",
+		"Fears ": "For their beauty to fade"
+	},
+	{
+		"Name": "Rose",
+		"Likes": "shit",
+		"Dislikes": "average",
+		"GoodResponses": "",
+		"BadResponses": "",
+		"Description": "",
+		"Wants": "",
+		"Fears ": ""
+	},
+	{
+		"Name": "Rose",
+		"Likes": "god",
+		"Dislikes": "basic",
+		"GoodResponses": "",
+		"BadResponses": "",
+		"Description": "",
+		"Wants": "",
+		"Fears ": ""
+	},
+	{
+		"Name": "Rose",
+		"Likes": "bitch",
+		"Dislikes": "unpleasant ",
+		"GoodResponses": "",
+		"BadResponses": "",
+		"Description": "",
+		"Wants": "",
+		"Fears ": ""
+	},
+	{
+		"Name": "Rose",
+		"Likes": "fabulous",
+		"Dislikes": "repulsive",
+		"GoodResponses": "",
+		"BadResponses": "",
+		"Description": "",
+		"Wants": "",
+		"Fears ": ""
+	},
+	{
+		"Name": "Rose",
+		"Likes": "tremendous",
+		"Dislikes": "unattractive",
+		"GoodResponses": "",
+		"BadResponses": "",
+		"Description": "",
+		"Wants": "",
+		"Fears ": ""
+	},
+	{
+		"Name": "Rose",
+		"Likes": "stupendous",
+		"Dislikes": "ill-favoured",
+		"GoodResponses": "",
+		"BadResponses": "",
+		"Description": "",
+		"Wants": "",
+		"Fears ": ""
+	},
+	{
+		"Name": "Rose",
+		"Likes": "prodigious",
+		"Dislikes": "hideous",
+		"GoodResponses": "",
+		"BadResponses": "",
+		"Description": "",
+		"Wants": "",
+		"Fears ": ""
+	},
+	{
+		"Name": "Rose",
+		"Likes": "phenomenal",
+		"Dislikes": "plain",
+		"GoodResponses": "",
+		"BadResponses": "",
+		"Description": "",
+		"Wants": "",
+		"Fears ": ""
+	},
+	{
+		"Name": "Rose",
+		"Likes": "extraordinary",
+		"Dislikes": "wrinkly",
+		"GoodResponses": "",
+		"BadResponses": "",
+		"Description": "",
+		"Wants": "",
+		"Fears ": ""
+	},
+	{
+		"Name": "Rose",
+		"Likes": "remarkable",
+		"Dislikes": "cute",
+		"GoodResponses": "",
+		"BadResponses": "",
+		"Description": "",
+		"Wants": "",
+		"Fears ": ""
+	},
+	{
+		"Name": "Rose",
+		"Likes": "exceptional",
+		"Dislikes": "unlovely",
+		"GoodResponses": "",
+		"BadResponses": "",
+		"Description": "",
+		"Wants": "",
+		"Fears ": ""
+	},
+	{
+		"Name": "Rose",
+		"Likes": "astounding",
+		"Dislikes": "old",
+		"GoodResponses": "",
+		"BadResponses": "",
+		"Description": "",
+		"Wants": "",
+		"Fears ": ""
+	},
+	{
+		"Name": "Rose",
+		"Likes": "amazing",
+		"Dislikes": "unsightly",
+		"GoodResponses": "",
+		"BadResponses": "",
+		"Description": "",
+		"Wants": "",
+		"Fears ": ""
+	},
+	{
+		"Name": "Rose",
+		"Likes": "astonishing",
+		"Dislikes": "displeasing",
+		"GoodResponses": "",
+		"BadResponses": "",
+		"Description": "",
+		"Wants": "",
+		"Fears ": ""
+	},
+	{
+		"Name": "Rose",
+		"Likes": "fantastic",
+		"Dislikes": "disagreeable",
+		"GoodResponses": "",
+		"BadResponses": "",
+		"Description": "",
+		"Wants": "",
+		"Fears ": ""
+	},
+	{
+		"Name": "Rose",
+		"Likes": "breathtaking",
+		"Dislikes": "horrible",
+		"GoodResponses": "",
+		"BadResponses": "",
+		"Description": "",
+		"Wants": "",
+		"Fears ": ""
+	},
+	{
+		"Name": "Rose",
+		"Likes": "mythical",
+		"Dislikes": "frightful",
+		"GoodResponses": "",
+		"BadResponses": "",
+		"Description": "",
+		"Wants": "",
+		"Fears ": ""
+	},
+	{
+		"Name": "Rose",
+		"Likes": "legendary",
+		"Dislikes": "awful",
+		"GoodResponses": "",
+		"BadResponses": "",
+		"Description": "",
+		"Wants": "",
+		"Fears ": ""
+	},
+	{
+		"Name": "Rose",
+		"Likes": "mythic",
+		"Dislikes": "ghastly",
+		"GoodResponses": "",
+		"BadResponses": "",
+		"Description": "",
+		"Wants": "",
+		"Fears ": ""
+	},
+	{
+		"Name": "Rose",
+		"Likes": "mythological",
+		"Dislikes": "gruesome",
+		"GoodResponses": "",
+		"BadResponses": "",
+		"Description": "",
+		"Wants": "",
+		"Fears ": ""
+	},
+	{
+		"Name": "Rose",
+		"Likes": "fabled",
+		"Dislikes": "grisly",
+		"GoodResponses": "",
+		"BadResponses": "",
+		"Description": "",
+		"Wants": "",
+		"Fears ": ""
+	},
+	{
+		"Name": "Rose",
+		"Likes": "folkloric",
+		"Dislikes": "unpleasant",
+		"GoodResponses": "",
+		"BadResponses": "",
+		"Description": "",
+		"Wants": "",
+		"Fears ": ""
+	},
+	{
+		"Name": "Rose",
+		"Likes": "fairy-tale",
+		"Dislikes": "foul",
+		"GoodResponses": "",
+		"BadResponses": "",
+		"Description": "",
+		"Wants": "",
+		"Fears ": ""
+	},
+	{
+		"Name": "Rose",
+		"Likes": "heroic",
+		"Dislikes": "nasty",
+		"GoodResponses": "",
+		"BadResponses": "",
+		"Description": "",
+		"Wants": "",
+		"Fears ": ""
+	},
+	{
+		"Name": "Rose",
+		"Likes": "traditional",
+		"Dislikes": "grim",
+		"GoodResponses": "",
+		"BadResponses": "",
+		"Description": "",
+		"Wants": "",
+		"Fears ": ""
+	},
+	{
+		"Name": "Rose",
+		"Likes": "ravishing",
+		"Dislikes": "vile",
+		"GoodResponses": "",
+		"BadResponses": "",
+		"Description": "",
+		"Wants": "",
+		"Fears ": ""
+	},
+	{
+		"Name": "Rose",
+		"Likes": "high-status",
+		"Dislikes": "shocking",
+		"GoodResponses": "",
+		"BadResponses": "",
+		"Description": "",
+		"Wants": "",
+		"Fears ": ""
+	},
+	{
+		"Name": "Rose",
+		"Likes": "royal",
+		"Dislikes": "disgusting",
+		"GoodResponses": "",
+		"BadResponses": "",
+		"Description": "",
+		"Wants": "",
+		"Fears ": ""
+	},
+	{
+		"Name": "Rose",
+		"Likes": "",
+		"Dislikes": "revolting",
+		"GoodResponses": "",
+		"BadResponses": "",
+		"Description": "",
+		"Wants": "",
+		"Fears ": ""
+	},
+	{
+		"Name": "Rose",
+		"Likes": "",
+		"Dislikes": "repellent",
+		"GoodResponses": "",
+		"BadResponses": "",
+		"Description": "",
+		"Wants": "",
+		"Fears ": ""
+	},
+	{
+		"Name": "Rose",
+		"Likes": "",
+		"Dislikes": "repugnant",
+		"GoodResponses": "",
+		"BadResponses": "",
+		"Description": "",
+		"Wants": "",
+		"Fears ": ""
+	},
+	{
+		"Name": "Rose",
+		"Likes": "",
+		"Dislikes": "grotesque",
+		"GoodResponses": "",
+		"BadResponses": "",
+		"Description": "",
+		"Wants": "",
+		"Fears ": ""
+	},
+	{
+		"Name": "Rose",
+		"Likes": "",
+		"Dislikes": "monstrous",
+		"GoodResponses": "",
+		"BadResponses": "",
+		"Description": "",
+		"Wants": "",
+		"Fears ": ""
+	},
+	{
+		"Name": "Rose",
+		"Likes": "",
+		"Dislikes": "reptilian",
+		"GoodResponses": "",
+		"BadResponses": "",
+		"Description": "",
+		"Wants": "",
+		"Fears ": ""
+	},
+	{
+		"Name": "Rose",
+		"Likes": "",
+		"Dislikes": "misshapen",
+		"GoodResponses": "",
+		"BadResponses": "",
+		"Description": "",
+		"Wants": "",
+		"Fears ": ""
+	},
+	{
+		"Name": "Rose",
+		"Likes": "",
+		"Dislikes": "deformed",
+		"GoodResponses": "",
+		"BadResponses": "",
+		"Description": "",
+		"Wants": "",
+		"Fears ": ""
+	},
+	{
+		"Name": "Rose",
+		"Likes": "",
+		"Dislikes": "disfigured",
+		"GoodResponses": "",
+		"BadResponses": "",
+		"Description": "",
+		"Wants": "",
+		"Fears ": ""
+	},
+	{
+		"Name": "Rose",
+		"Likes": "",
+		"Dislikes": "homely",
+		"GoodResponses": "",
+		"BadResponses": "",
+		"Description": "",
+		"Wants": "",
+		"Fears ": ""
+	},
+	{
+		"Name": "Daisy",
+		"Likes": "lovely",
+		"Dislikes": "slow",
+		"GoodResponses": "Oh my god YUM! Thank you so much! Yum yum yum this is delish you are THE BEST!",
+		"BadResponses": "Ahh oh no! Um, that's okay, I... like being shrivelled anway? I'll be fine don't worry about me :)",
+		"Description": "Daisies are the most basic flower you can have in the garden. They require a few words of affirmation, but you'll find they work hard for you without much effort on your end!",
+		"Wants": "To be praised",
+		"Fears ": "To disappoint someone or be sworn at"
+	},
+	{
+		"Name": "Daisy",
+		"Likes": "beautiful",
+		"Dislikes": "unhealthy",
+		"GoodResponses": "",
+		"BadResponses": "",
+		"Description": "",
+		"Wants": "",
+		"Fears ": ""
+	},
+	{
+		"Name": "Daisy",
+		"Likes": "pretty",
+		"Dislikes": "fuck",
+		"GoodResponses": "",
+		"BadResponses": "",
+		"Description": "",
+		"Wants": "",
+		"Fears ": ""
+	},
+	{
+		"Name": "Daisy",
+		"Likes": "as pretty as a picture",
+		"Dislikes": "shit",
+		"GoodResponses": "",
+		"BadResponses": "",
+		"Description": "",
+		"Wants": "",
+		"Fears ": ""
+	},
+	{
+		"Name": "Daisy",
+		"Likes": "attractive",
+		"Dislikes": "god",
+		"GoodResponses": "",
+		"BadResponses": "",
+		"Description": "",
+		"Wants": "",
+		"Fears ": ""
+	},
+	{
+		"Name": "Daisy",
+		"Likes": "good-looking",
+		"Dislikes": "unhealthy",
+		"GoodResponses": "",
+		"BadResponses": "",
+		"Description": "",
+		"Wants": "",
+		"Fears ": ""
+	},
+	{
+		"Name": "Daisy",
+		"Likes": "appealing",
+		"Dislikes": "harmful",
+		"GoodResponses": "",
+		"BadResponses": "",
+		"Description": "",
+		"Wants": "",
+		"Fears ": ""
+	},
+	{
+		"Name": "Daisy",
+		"Likes": "handsome",
+		"Dislikes": "detrimental",
+		"GoodResponses": "",
+		"BadResponses": "",
+		"Description": "",
+		"Wants": "",
+		"Fears ": ""
+	},
+	{
+		"Name": "Daisy",
+		"Likes": "adorable",
+		"Dislikes": "destructive",
+		"GoodResponses": "",
+		"BadResponses": "",
+		"Description": "",
+		"Wants": "",
+		"Fears ": ""
+	},
+	{
+		"Name": "Daisy",
+		"Likes": "exquisite",
+		"Dislikes": "fail",
+		"GoodResponses": "",
+		"BadResponses": "",
+		"Description": "",
+		"Wants": "",
+		"Fears ": ""
+	},
+	{
+		"Name": "Daisy",
+		"Likes": "sweet",
+		"Dislikes": "damaging",
+		"GoodResponses": "",
+		"BadResponses": "",
+		"Description": "",
+		"Wants": "",
+		"Fears ": ""
+	},
+	{
+		"Name": "Daisy",
+		"Likes": "personable",
+		"Dislikes": "ruinous",
+		"GoodResponses": "",
+		"BadResponses": "",
+		"Description": "",
+		"Wants": "",
+		"Fears ": ""
+	},
+	{
+		"Name": "Daisy",
+		"Likes": "charming",
+		"Dislikes": "malign",
+		"GoodResponses": "",
+		"BadResponses": "",
+		"Description": "",
+		"Wants": "",
+		"Fears ": ""
+	},
+	{
+		"Name": "Daisy",
+		"Likes": "enchanting",
+		"Dislikes": "noxious",
+		"GoodResponses": "",
+		"BadResponses": "",
+		"Description": "",
+		"Wants": "",
+		"Fears ": ""
+	},
+	{
+		"Name": "Daisy",
+		"Likes": "engaging",
+		"Dislikes": "poisonous",
+		"GoodResponses": "",
+		"BadResponses": "",
+		"Description": "",
+		"Wants": "",
+		"Fears ": ""
+	},
+	{
+		"Name": "Daisy",
+		"Likes": "bewitching",
+		"Dislikes": "risky",
+		"GoodResponses": "",
+		"BadResponses": "",
+		"Description": "",
+		"Wants": "",
+		"Fears ": ""
+	},
+	{
+		"Name": "Daisy",
+		"Likes": "gorgeous",
+		"Dislikes": "dangerous",
+		"GoodResponses": "",
+		"BadResponses": "",
+		"Description": "",
+		"Wants": "",
+		"Fears ": ""
+	},
+	{
+		"Name": "Daisy",
+		"Likes": "alluring",
+		"Dislikes": "dumb",
+		"GoodResponses": "",
+		"BadResponses": "",
+		"Description": "",
+		"Wants": "",
+		"Fears ": ""
+	},
+	{
+		"Name": "Daisy",
+		"Likes": "ravishing",
+		"Dislikes": "stupid",
+		"GoodResponses": "",
+		"BadResponses": "",
+		"Description": "",
+		"Wants": "",
+		"Fears ": ""
+	},
+	{
+		"Name": "Daisy",
+		"Likes": "glamorous",
+		"Dislikes": "Similar",
+		"GoodResponses": "",
+		"BadResponses": "",
+		"Description": "",
+		"Wants": "",
+		"Fears ": ""
+	},
+	{
+		"Name": "Daisy",
+		"Likes": "tasty",
+		"Dislikes": "stupid",
+		"GoodResponses": "",
+		"BadResponses": "",
+		"Description": "",
+		"Wants": "",
+		"Fears ": ""
+	},
+	{
+		"Name": "Daisy",
+		"Likes": "knockout",
+		"Dislikes": "unintelligent",
+		"GoodResponses": "",
+		"BadResponses": "",
+		"Description": "",
+		"Wants": "",
+		"Fears ": ""
+	},
+	{
+		"Name": "Daisy",
+		"Likes": "stunning",
+		"Dislikes": "ignorant",
+		"GoodResponses": "",
+		"BadResponses": "",
+		"Description": "",
+		"Wants": "",
+		"Fears ": ""
+	},
+	{
+		"Name": "Daisy",
+		"Likes": "drop-dead gorgeous",
+		"Dislikes": "dense",
+		"GoodResponses": "",
+		"BadResponses": "",
+		"Description": "",
+		"Wants": "",
+		"Fears ": ""
+	},
+	{
+		"Name": "Daisy",
+		"Likes": "adorbs",
+		"Dislikes": "brainless",
+		"GoodResponses": "",
+		"BadResponses": "",
+		"Description": "",
+		"Wants": "",
+		"Fears ": ""
+	},
+	{
+		"Name": "Daisy",
+		"Likes": "fit",
+		"Dislikes": "mindless",
+		"GoodResponses": "",
+		"BadResponses": "",
+		"Description": "",
+		"Wants": "",
+		"Fears ": ""
+	},
+	{
+		"Name": "Daisy",
+		"Likes": "smashing",
+		"Dislikes": "foolish",
+		"GoodResponses": "",
+		"BadResponses": "",
+		"Description": "",
+		"Wants": "",
+		"Fears ": ""
+	},
+	{
+		"Name": "Daisy",
+		"Likes": "cute",
+		"Dislikes": "slow-witted",
+		"GoodResponses": "",
+		"BadResponses": "",
+		"Description": "",
+		"Wants": "",
+		"Fears ": ""
+	},
+	{
+		"Name": "Daisy",
+		"Likes": "foxy",
+		"Dislikes": "slow",
+		"GoodResponses": "",
+		"BadResponses": "",
+		"Description": "",
+		"Wants": "",
+		"Fears ": ""
+	},
+	{
+		"Name": "Daisy",
+		"Likes": "beauteous",
+		"Dislikes": "dull",
+		"GoodResponses": "",
+		"BadResponses": "",
+		"Description": "",
+		"Wants": "",
+		"Fears ": ""
+	},
+	{
+		"Name": "Daisy",
+		"Likes": "comely",
+		"Dislikes": "dull-witted",
+		"GoodResponses": "",
+		"BadResponses": "",
+		"Description": "",
+		"Wants": "",
+		"Fears ": ""
+	},
+	{
+		"Name": "Daisy",
+		"Likes": "fair",
+		"Dislikes": "witless",
+		"GoodResponses": "",
+		"BadResponses": "",
+		"Description": "",
+		"Wants": "",
+		"Fears ": ""
+	},
+	{
+		"Name": "Daisy",
+		"Likes": "sightly",
+		"Dislikes": "half-witted",
+		"GoodResponses": "",
+		"BadResponses": "",
+		"Description": "",
+		"Wants": "",
+		"Fears ": ""
+	},
+	{
+		"Name": "Daisy",
+		"Likes": "scenic",
+		"Dislikes": "blockish",
+		"GoodResponses": "",
+		"BadResponses": "",
+		"Description": "",
+		"Wants": "",
+		"Fears ": ""
+	},
+	{
+		"Name": "Daisy",
+		"Likes": "picturesque",
+		"Dislikes": "simple",
+		"GoodResponses": "",
+		"BadResponses": "",
+		"Description": "",
+		"Wants": "",
+		"Fears ": ""
+	},
+	{
+		"Name": "Daisy",
+		"Likes": "pleasing",
+		"Dislikes": "simple-minded",
+		"GoodResponses": "",
+		"BadResponses": "",
+		"Description": "",
+		"Wants": "",
+		"Fears ": ""
+	},
+	{
+		"Name": "Daisy",
+		"Likes": "easy on the eye",
+		"Dislikes": "empty-headed",
+		"GoodResponses": "",
+		"BadResponses": "",
+		"Description": "",
+		"Wants": "",
+		"Fears ": ""
+	},
+	{
+		"Name": "Daisy",
+		"Likes": "magnificent",
+		"Dislikes": "vacuous",
+		"GoodResponses": "",
+		"BadResponses": "",
+		"Description": "",
+		"Wants": "",
+		"Fears ": ""
+	},
+	{
+		"Name": "Daisy",
+		"Likes": "splendid",
+		"Dislikes": "vapid",
+		"GoodResponses": "",
+		"BadResponses": "",
+		"Description": "",
+		"Wants": "",
+		"Fears ": ""
+	},
+	{
+		"Name": "Daisy",
+		"Likes": "",
+		"Dislikes": "idiotic",
+		"GoodResponses": "",
+		"BadResponses": "",
+		"Description": "",
+		"Wants": "",
+		"Fears ": ""
+	},
+	{
+		"Name": "Daisy",
+		"Likes": "",
+		"Dislikes": "moronic",
+		"GoodResponses": "",
+		"BadResponses": "",
+		"Description": "",
+		"Wants": "",
+		"Fears ": ""
+	},
+	{
+		"Name": "Daisy",
+		"Likes": "",
+		"Dislikes": "imbecilic",
+		"GoodResponses": "",
+		"BadResponses": "",
+		"Description": "",
+		"Wants": "",
+		"Fears ": ""
+	},
+	{
+		"Name": "Daisy",
+		"Likes": "",
+		"Dislikes": "dim",
+		"GoodResponses": "",
+		"BadResponses": "",
+		"Description": "",
+		"Wants": "",
+		"Fears ": ""
+	},
+	{
+		"Name": "Daisy",
+		"Likes": "",
+		"Dislikes": "dopey",
+		"GoodResponses": "",
+		"BadResponses": "",
+		"Description": "",
+		"Wants": "",
+		"Fears ": ""
+	},
+	{
+		"Name": "Daisy",
+		"Likes": "",
+		"Dislikes": "dippy",
+		"GoodResponses": "",
+		"BadResponses": "",
+		"Description": "",
+		"Wants": "",
+		"Fears ": ""
+	},
+	{
+		"Name": "Daisy",
+		"Likes": "",
+		"Dislikes": "dozy",
+		"GoodResponses": "",
+		"BadResponses": "",
+		"Description": "",
+		"Wants": "",
+		"Fears ": ""
+	}
+  ]
+} 
