@@ -14,12 +14,16 @@ public class NotebookManager : MonoBehaviour
     [SerializeField] private List<TextMeshProUGUI> textElements;
     [SerializeField] private Animator notebookAnimator;
 
+    private int pageIndex = 0;
+
     [Header("Public fields")]
     public List<PlantData> ListOfPlants;
     public void OpenNotebook()
     {
         notebookAnimator.Play("anim_NotebookOpen");
         openUI.SetActive(false);
+        pageIndex = 0;
+        UpdatePageData();
     }
 
     public void CloseNotebook()
@@ -48,11 +52,25 @@ public class NotebookManager : MonoBehaviour
     {
         pageTurner.SetActive(true);
         pageTurner.GetComponent<Animator>().Play("anim_Pageturn");
+        FadeOutUI();
+        Invoke("FadeInUI", .2f);
+        if(pageIndex < ListOfPlants.Count-1)
+        {
+            pageIndex++;
+        }
+        else { pageIndex = 0; }
+        UpdatePageData();
     }
 
     public void DispenseSeed(string seedName)
     {
         CloseNotebook();
         seed.SetActive(true);
+    }
+    
+    private void UpdatePageData()
+    {
+        textElements[0].text = ListOfPlants[pageIndex].Name;
+        textElements[1].text = ListOfPlants[pageIndex].Description;
     }
 }

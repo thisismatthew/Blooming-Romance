@@ -59,11 +59,12 @@ public class JSONLoader : MonoBehaviour
         }
         PlantsLoadedIn.Add(currentPlantImport);
 
-        foreach (PlantData p in PlantsLoadedIn)
+        /*foreach (PlantData p in PlantsLoadedIn)
         {
             Debug.Log("NEW PLANT "+p.Name);
             foreach (string l in p.Likes) Debug.Log(l);
-        }
+        }*/
+        nm.ListOfPlants = PlantsLoadedIn;
     }
 
 }
