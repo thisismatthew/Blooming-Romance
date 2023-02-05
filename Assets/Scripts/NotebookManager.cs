@@ -66,8 +66,19 @@ public class NotebookManager : MonoBehaviour
     {
         CloseNotebook();
         seed.SetActive(true);
+        CharacterController player = FindObjectOfType<CharacterController>();
+        player.HoldingSeed = true;
+        player.CurrentSeedData = ListOfPlants[pageIndex];
     }
-    
+
+    private void Update()
+    {
+        if (FindObjectOfType<CharacterController>().HoldingSeed == false)
+        {
+            seed.SetActive(false);
+        }
+    }
+
     private void UpdatePageData()
     {
         textElements[0].text = ListOfPlants[pageIndex].Name;

@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-enum CharacterState
+public enum CharacterState
 {
     idle,
     walking,
@@ -16,17 +16,25 @@ public class CharacterController : MonoBehaviour
     private Rigidbody2D rb;
     private Vector2 movement;
     private Animator anim;
-    private CharacterState currentState = CharacterState.idle;
+    public CharacterState CurrentState = CharacterState.idle;
     private CharacterState newState = CharacterState.idle;
     private bool facingRight = false;
+    public bool HoldingSeed;
+    public PlantData CurrentSeedData;
+    [SerializeField] private ParticleSystem waterDrops;
+    private bool watering = false;
+
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
+        DisableWaterInAnimation();
     }
 
     private void Update()
     {
+        if (watering) return;
+
         movement.x = Input.GetAxisRaw("Horizontal");
         movement.y = Input.GetAxisRaw("Vertical");
         if (movement == Vector2.zero)
@@ -39,20 +47,29 @@ public class CharacterController : MonoBehaviour
             if (movement.x < 0) facingRight = false;
             newState = CharacterState.walking;
         }
+        if (Input.GetKeyDown(KeyCode.Q))
+        {
+            watering = true;
+            newState = CharacterState.pouring;
+            Invoke("WateringDone", 3f);
+        }
     }
 
     private void FixedUpdate()
     {
         UpdateAnimation();
-        rb.MovePosition(rb.position + movement * moveSpeed);
+        if (CurrentState == CharacterState.walking)
+        {
+            rb.MovePosition(rb.position + movement * moveSpeed);
+        }
     }
 
     private void UpdateAnimation()
     {
-        if (newState != currentState)
+        if (newState != CurrentState)
         {
-            currentState = newState;
-            switch (currentState)
+            CurrentState = newState;
+            switch (CurrentState)
             {
                 case CharacterState.idle:
                     if (facingRight) anim.Play("anim_OldLadyRight"); else anim.Play("anim_OldLadyLeft");
@@ -60,7 +77,26 @@ public class CharacterController : MonoBehaviour
                 case CharacterState.walking:
                     if (facingRight) anim.Play("anim_OldWalkinRight"); else anim.Play("anim_OldWalkinLeft");
                     break;
+                case CharacterState.pouring:
+                    if (facingRight) anim.Play("anim_OldWateringRight"); else anim.Play("anim_OldWateringLeft");
+                    break;
             }
+
         }
+    }
+
+    public void EnableWaterInAnimation()
+    {
+        waterDrops.enableEmission = true;
+    }
+
+    public void DisableWaterInAnimation()
+    {
+        waterDrops.enableEmission = false;
+    }
+
+    public void WateringDone()
+    {
+        watering = false;
     }
 }
