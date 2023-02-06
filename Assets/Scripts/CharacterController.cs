@@ -8,6 +8,7 @@ public enum CharacterState
     walking,
     holding,
     pouring,
+    talking,
 }
 
 public class CharacterController : MonoBehaviour
@@ -23,6 +24,7 @@ public class CharacterController : MonoBehaviour
     public PlantData CurrentSeedData;
     [SerializeField] private ParticleSystem waterDrops;
     private bool watering = false;
+    private bool talking = false;
 
     private void Start()
     {
@@ -32,8 +34,8 @@ public class CharacterController : MonoBehaviour
     }
 
     private void Update()
-    {
-        if (watering) return;
+    {       
+        if (watering || talking) return;
 
         movement.x = Input.GetAxisRaw("Horizontal");
         movement.y = Input.GetAxisRaw("Vertical");
@@ -98,5 +100,10 @@ public class CharacterController : MonoBehaviour
     public void WateringDone()
     {
         watering = false;
+    }
+
+    public void IsTalking(bool _talking)
+    {
+        talking = _talking;
     }
 }
