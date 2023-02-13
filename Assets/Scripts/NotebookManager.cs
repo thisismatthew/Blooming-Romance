@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using DG.Tweening;
+using UnityEngine.UI;
 using TMPro;
 
 public class NotebookManager : MonoBehaviour
@@ -11,6 +12,8 @@ public class NotebookManager : MonoBehaviour
     [SerializeField] private GameObject notebookObject;
     [SerializeField] private GameObject seed;
     [SerializeField] private GameObject pageTurner;
+    [SerializeField] private Image descriptiveImage;
+    [SerializeField] private List<Sprite> plantSprites;
     [SerializeField] private List<TextMeshProUGUI> textElements;
     [SerializeField] private Animator notebookAnimator;
 
@@ -20,6 +23,7 @@ public class NotebookManager : MonoBehaviour
     public List<PlantData> ListOfPlants;
     public void OpenNotebook()
     {
+        FindAnyObjectByType<AudioManager>().Play("notebook open");
         notebookAnimator.Play("anim_NotebookOpen");
         openUI.SetActive(false);
         pageIndex = 0;
@@ -28,6 +32,7 @@ public class NotebookManager : MonoBehaviour
 
     public void CloseNotebook()
     {
+        FindAnyObjectByType<AudioManager>().Play("notebook close");
         notebookAnimator.Play("anim_NotebookClose");
         openUI.SetActive(true);
     }
@@ -38,6 +43,7 @@ public class NotebookManager : MonoBehaviour
         {
             t.DOFade(1, .1f);
         }
+        descriptiveImage.DOFade(1, .1f);
     }
 
     public void FadeOutUI()
@@ -46,10 +52,12 @@ public class NotebookManager : MonoBehaviour
         {
             t.DOFade(0, .1f);
         }
+        descriptiveImage.DOFade(0, .1f);
     }
 
     public void NextPage()
     {
+        FindAnyObjectByType<AudioManager>().Play("page turn");
         pageTurner.SetActive(true);
         pageTurner.GetComponent<Animator>().Play("anim_Pageturn");
         FadeOutUI();
@@ -81,6 +89,7 @@ public class NotebookManager : MonoBehaviour
 
     private void UpdatePageData()
     {
+        descriptiveImage.sprite = plantSprites[pageIndex];
         textElements[0].text = ListOfPlants[pageIndex].Name;
         textElements[1].text = ListOfPlants[pageIndex].Description;
     }

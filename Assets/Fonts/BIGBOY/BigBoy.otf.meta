@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: ec8e721898c187f459da43ce45afff32
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - Big Boy
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 146fade0d6852ac4e988ea64d6a962a8, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

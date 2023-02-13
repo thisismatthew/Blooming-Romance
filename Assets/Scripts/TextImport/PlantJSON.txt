@@ -1,6 +1,5 @@
 {
-"_PlantData":
-    [
+ "_PlantData":[
       {
         "Name": "Daisy",
         "Likes": "lovely",
@@ -1302,5 +1301,4 @@
         "Fears ": ""
       }
    ]
-
-{
+}

@@ -80,6 +80,7 @@ public class CharacterController : MonoBehaviour
                     if (facingRight) anim.Play("anim_OldWalkinRight"); else anim.Play("anim_OldWalkinLeft");
                     break;
                 case CharacterState.pouring:
+                    FindAnyObjectByType<AudioManager>().Play("watering");
                     if (facingRight) anim.Play("anim_OldWateringRight"); else anim.Play("anim_OldWateringLeft");
                     break;
             }

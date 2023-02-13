@@ -4,13 +4,6 @@ using UnityEngine;
 using DG.Tweening;
 using TMPro;
 
-public enum PlantTalking
-{
-    Daisy,
-    Rose,
-    Melon,
-    Basil,
-}
 
 enum Response
 {
@@ -23,7 +16,6 @@ public class DialogueController : MonoBehaviour
 { 
     private CharacterController player;
     public bool InDialogue = false;
-    public PlantTalking ActivePlant;
     private bool playerTurn = true;
     private PlantData activePlant;
     private PlantingBed activeBed;
@@ -100,20 +92,22 @@ public class DialogueController : MonoBehaviour
             if (!actionTaken)
             {
                 ResponseText.GetComponent<TextMeshProUGUI>().text = plantResponse;
-                switch (ActivePlant)
+                switch (activePlant.Name)
                 {
-                    case PlantTalking.Daisy:
+                    case "Daisy":
                         plantAnim.Play("anim_talkingDaisy");
                         break;
-                    case PlantTalking.Rose:
+                    case "Rose":
                         break;
-                    case PlantTalking.Melon:
-                        plantAnim.Play("Watermelon");
+                    case "Melon":
+                        plantAnim.Play("Watermellon");
                         break;
-                    case PlantTalking.Basil:
+                    case "Basil":
+                        break;
+                    case "Tomato":
                         break;
                 }
-                Invoke("ProcessResponse", 2f);
+                Invoke("ProcessResponse", 4f);
                 actionTaken = true;
             }
 
@@ -136,6 +130,7 @@ public class DialogueController : MonoBehaviour
                 if (w == s)
                 {
                     plantResponse = activePlant.GoodResponses[Random.Range(0, activePlant.GoodResponses.Count - 1)];
+                    plantResponse = SwapTagWithWord(plantResponse, s);
                     lastResponceType = Response.good;
                     return;
                 }
@@ -146,6 +141,7 @@ public class DialogueController : MonoBehaviour
                 if (w == s)
                 {
                     plantResponse = activePlant.BadResponses[Random.Range(0, activePlant.BadResponses.Count - 1)];
+                    plantResponse = SwapTagWithWord(plantResponse, s);
                     lastResponceType = Response.bad;
                     return;
                 }
@@ -155,7 +151,7 @@ public class DialogueController : MonoBehaviour
         //if we're her we did not find good or bad words.
         //lets give a hint?
 
-        plantResponse = "I just want " + activePlant.Wants;
+        plantResponse = "Um, I don't know how to feel about that...";
         lastResponceType = Response.nuetral;
 
     }
@@ -180,6 +176,12 @@ public class DialogueController : MonoBehaviour
                 break;
 
         }
+    }
+
+    private string SwapTagWithWord(string _response, string _word)
+    {
+        string[] split = _response.Split("[x]");
+        return split[0] + _word + split[1];
     }
 }
 

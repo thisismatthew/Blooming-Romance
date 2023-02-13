@@ -67,6 +67,7 @@ public class PlantingBed : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.E))
             {
+                FindAnyObjectByType<AudioManager>().Play("planting");
                 hasPlant = true;
                 currentPlant = player.CurrentSeedData;
                 player.HoldingSeed = false;
@@ -147,7 +148,7 @@ public class PlantingBed : MonoBehaviour
                         childAnim.Play("anim_daisy_full");
                         break;
                     case "Melon":
-                        //childAnim.Play("anim_melon_full");
+                        childAnim.Play("anim_melon_full");
                         break;
                 }
 
