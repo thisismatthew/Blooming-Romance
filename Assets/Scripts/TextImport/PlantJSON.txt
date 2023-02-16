@@ -1299,6 +1299,16 @@
         "Description": "",
         "Wants": "",
         "Fears ": ""
+      },
+      {
+        "Name": "Dinner With Hubby",
+        "Likes": "spaghetti",
+        "Dislikes": "spagoo",
+        "GoodResponses": "spaget",
+        "BadResponses": "spagot",
+        "Description": "Placeholder text here describing a nice spaghetti din with the hub",
+        "Wants": "",
+        "Fears ": ""
       }
    ]
 }

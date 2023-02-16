@@ -12,10 +12,12 @@ public class NotebookManager : MonoBehaviour
     [SerializeField] private GameObject notebookObject;
     [SerializeField] private GameObject seed;
     [SerializeField] private GameObject pageTurner;
+    [SerializeField] private GameObject newspaper;
     [SerializeField] private Image descriptiveImage;
     [SerializeField] private List<Sprite> plantSprites;
     [SerializeField] private List<TextMeshProUGUI> textElements;
     [SerializeField] private Animator notebookAnimator;
+
     private int pageIndex = 0;
 
     [Header("Money Stuff")]
@@ -42,15 +44,21 @@ public class NotebookManager : MonoBehaviour
     public void CloseNotebook()
     {
         IsOpen = false;
+
+        if (pageIndex == 5)
+        {
+            newspaper.SetActive(false);
+        }
+
         FindAnyObjectByType<AudioManager>().Play("notebook close");
         notebookAnimator.Play("anim_NotebookClose");
         Invoke("FadeInUIButton", .4f);
-
     }
 
     public void FadeInUI()
     {
-        foreach(TextMeshProUGUI t in textElements)
+        if (pageIndex == 5) newspaper.GetComponent<Image>().DOFade(1, .1f);
+        foreach (TextMeshProUGUI t in textElements)
         {
             t.DOFade(1, .1f);
         }
@@ -59,6 +67,7 @@ public class NotebookManager : MonoBehaviour
 
     public void FadeOutUI()
     {
+        if (pageIndex == 5) newspaper.GetComponent<Image>().DOFade(0, .1f);
         foreach (TextMeshProUGUI t in textElements)
         {
             t.DOFade(0, .1f);
@@ -87,6 +96,11 @@ public class NotebookManager : MonoBehaviour
         //check if the player can afford it
         if (Money >= seedCosts[pageIndex])
         {
+            if(ListOfPlants[pageIndex].Name=="Dinner With Hubby")
+            {
+                TriggerEndCutscene();
+                return;
+            }
             CloseNotebook();
             seed.SetActive(true);
             CharacterController player = FindObjectOfType<CharacterController>();
@@ -113,6 +127,17 @@ public class NotebookManager : MonoBehaviour
     private void UpdatePageData()
     {
         textElements[5].text = seedCosts[pageIndex].ToString();
+        if (pageIndex < 5)
+        {
+            textElements[2].text = "Buy Seed";
+            newspaper.SetActive(false);
+        }
+        else
+        {
+            newspaper.SetActive(true);
+            textElements[2].text = "Buy Dinner";
+        }
+
         descriptiveImage.sprite = plantSprites[pageIndex];
         textElements[0].text = ListOfPlants[pageIndex].Name;
         textElements[1].text = ListOfPlants[pageIndex].Description;
@@ -121,5 +146,10 @@ public class NotebookManager : MonoBehaviour
     public void FadeInUIButton()
     {
         openUI.GetComponent<Image>().DOFade(1, .2f);
+    }
+
+    private void TriggerEndCutscene()
+    {
+        //Todo a little end cutscene. 
     }
 }
