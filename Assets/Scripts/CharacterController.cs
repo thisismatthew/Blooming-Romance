@@ -8,6 +8,7 @@ public enum CharacterState
     walking,
     holding,
     pouring,
+    talking,
 }
 
 public class CharacterController : MonoBehaviour
@@ -23,20 +24,29 @@ public class CharacterController : MonoBehaviour
     public PlantData CurrentSeedData;
     [SerializeField] private ParticleSystem waterDrops;
     private bool watering = false;
+    private bool talking = false;
+    private NotebookManager nm;
 
     private void Start()
     {
+        nm = FindObjectOfType<NotebookManager>();
         rb = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
         DisableWaterInAnimation();
     }
 
     private void Update()
-    {
-        if (watering) return;
+    {       
+        if (watering || talking) return;
 
         movement.x = Input.GetAxisRaw("Horizontal");
         movement.y = Input.GetAxisRaw("Vertical");
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            if (!nm.IsOpen) nm.OpenNotebook();
+            else nm.CloseNotebook();
+        }
+
         if (movement == Vector2.zero)
         {
             newState = CharacterState.idle;
@@ -78,6 +88,7 @@ public class CharacterController : MonoBehaviour
                     if (facingRight) anim.Play("anim_OldWalkinRight"); else anim.Play("anim_OldWalkinLeft");
                     break;
                 case CharacterState.pouring:
+                    FindAnyObjectByType<AudioManager>().Play("watering");
                     if (facingRight) anim.Play("anim_OldWateringRight"); else anim.Play("anim_OldWateringLeft");
                     break;
             }
@@ -98,5 +109,10 @@ public class CharacterController : MonoBehaviour
     public void WateringDone()
     {
         watering = false;
+    }
+
+    public void IsTalking(bool _talking)
+    {
+        talking = _talking;
     }
 }

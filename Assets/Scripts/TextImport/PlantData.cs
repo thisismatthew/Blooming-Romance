@@ -7,6 +7,7 @@ public class PlantData
 {
     public string Name, Description, Wants, Fears;
     public List<string> Likes, Dislikes, GoodResponses, BadResponses;
+    public int Yield;
     public PlantData(string _name)//string _description, string _wants, string _fears, List<string> _likes, List<string> _dislikes, List<string> _goodResponses, List<string> _badResponses
     {
         Name = _name;
