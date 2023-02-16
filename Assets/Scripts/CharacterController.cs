@@ -25,9 +25,11 @@ public class CharacterController : MonoBehaviour
     [SerializeField] private ParticleSystem waterDrops;
     private bool watering = false;
     private bool talking = false;
+    private NotebookManager nm;
 
     private void Start()
     {
+        nm = FindObjectOfType<NotebookManager>();
         rb = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
         DisableWaterInAnimation();
@@ -39,6 +41,12 @@ public class CharacterController : MonoBehaviour
 
         movement.x = Input.GetAxisRaw("Horizontal");
         movement.y = Input.GetAxisRaw("Vertical");
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            if (!nm.IsOpen) nm.OpenNotebook();
+            else nm.CloseNotebook();
+        }
+
         if (movement == Vector2.zero)
         {
             newState = CharacterState.idle;

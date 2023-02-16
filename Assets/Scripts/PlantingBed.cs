@@ -55,6 +55,7 @@ public class PlantingBed : MonoBehaviour
 
     private void OnTriggerExit2D(Collider2D other)
     {
+        if (other.tag != "Player") return;
         playerInZone = false;
         playerInZoneWithSeed = false;
         buttonPrompt.transform.DOScale(0.001f, .3f);
@@ -125,10 +126,11 @@ public class PlantingBed : MonoBehaviour
         {
             //we are done we can rapture this flower and give the player some money
             //Todo give money and make some kind of animation that pops the flower or something.
+            FindObjectOfType<NotebookManager>().Money += currentPlant.Yield;
             currentPlant = null;
             hasPlant = false;
             plantGrowthIndex = 0;
-            childAnim.Play("anim_Dormant");
+            childAnim.Play("coin_pop");
         }
 
         if (hasPlant && TriggerGrowth)
@@ -142,13 +144,19 @@ public class PlantingBed : MonoBehaviour
                 switch (currentPlant.Name)
                 {
                     case "Rose":
-                        //childAnim.Play("anim_rose_full");
+                        childAnim.Play("rose_grow_anim");
                         break;
                     case "Daisy":
                         childAnim.Play("anim_daisy_full");
                         break;
                     case "Melon":
                         childAnim.Play("anim_melon_full");
+                        break;
+                    case "Basil":
+                        childAnim.Play("anim_grow_basil");
+                        break;
+                    case "Tomato":
+                        childAnim.Play("anim_grow_tomato");
                         break;
                 }
 

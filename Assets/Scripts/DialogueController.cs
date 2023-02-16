@@ -40,6 +40,7 @@ public class DialogueController : MonoBehaviour
 
     public void LaunchDialogue(PlantData _plant, PlantingBed _bed)
     {
+        lastResponceType = Response.nuetral;
         activeBed = _bed;
         activePlant = _plant;
         actionTaken = false;
@@ -98,16 +99,19 @@ public class DialogueController : MonoBehaviour
                         plantAnim.Play("anim_talkingDaisy");
                         break;
                     case "Rose":
+                        plantAnim.Play("talking_rose");
                         break;
                     case "Melon":
                         plantAnim.Play("Watermellon");
                         break;
                     case "Basil":
+                        plantAnim.Play("talking_basil");
                         break;
                     case "Tomato":
+                        plantAnim.Play("talking_tomato");
                         break;
                 }
-                Invoke("ProcessResponse", 4f);
+                Invoke("ProcessResponse", 3f);
                 actionTaken = true;
             }
 
@@ -120,6 +124,7 @@ public class DialogueController : MonoBehaviour
         _text = _text.Replace('.', ' ');
         _text = _text.Replace(',', ' ');
         _text = _text.Replace('?', ' ');
+        _text = _text.Replace('\n', ' ');
         string[] words = _text.Split(" ");
         
         foreach (string w in words)
@@ -181,6 +186,11 @@ public class DialogueController : MonoBehaviour
     private string SwapTagWithWord(string _response, string _word)
     {
         string[] split = _response.Split("[x]");
+        if (split.Length < 2)
+        {
+            Debug.LogError("no [x] in statement: " + _response);
+            return _response;
+        }
         return split[0] + _word + split[1];
     }
 }
