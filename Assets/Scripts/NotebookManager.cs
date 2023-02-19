@@ -56,7 +56,7 @@ public class NotebookManager : MonoBehaviour
     }
 
     public void FadeInUI()
-    {
+    { 
         if (pageIndex == 5) newspaper.GetComponent<Image>().DOFade(1, .1f);
         foreach (TextMeshProUGUI t in textElements)
         {
