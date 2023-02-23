@@ -4,6 +4,7 @@ using UnityEngine;
 using DG.Tweening;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class NotebookManager : MonoBehaviour
 {
@@ -17,6 +18,7 @@ public class NotebookManager : MonoBehaviour
     [SerializeField] private List<Sprite> plantSprites;
     [SerializeField] private List<TextMeshProUGUI> textElements;
     [SerializeField] private Animator notebookAnimator;
+    [SerializeField] private Animator outroAnimator;
 
     private int pageIndex = 0;
 
@@ -150,6 +152,13 @@ public class NotebookManager : MonoBehaviour
 
     private void TriggerEndCutscene()
     {
-        //Todo a little end cutscene. 
+        outroAnimator.gameObject.SetActive(true);
+        outroAnimator.Play("newoutro");
+        Invoke("DelayedSceneLoad", 2f);
+    }
+
+    public void DelayedSceneLoad()
+    {
+        SceneManager.LoadScene("DateNight");
     }
 }
