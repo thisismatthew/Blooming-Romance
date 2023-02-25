@@ -68,7 +68,7 @@ public class PlantingBed : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.E))
             {
-                FindAnyObjectByType<AudioManager>().Play("planting");
+                //FindAnyObjectByType<AudioManager>().Play("planting");
                 hasPlant = true;
                 currentPlant = player.CurrentSeedData;
                 player.HoldingSeed = false;

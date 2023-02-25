@@ -35,7 +35,7 @@ public class NotebookManager : MonoBehaviour
 
     public void OpenNotebook()
     {
-        FindAnyObjectByType<AudioManager>().Play("notebook open");
+        //FindAnyObjectByType<AudioManager>().Play("notebook open");
         notebookAnimator.Play("anim_NotebookOpen");
         openUI.GetComponent<Image>().DOFade(0,.1f);
         pageIndex = 0;
@@ -52,7 +52,7 @@ public class NotebookManager : MonoBehaviour
             newspaper.SetActive(false);
         }
 
-        FindAnyObjectByType<AudioManager>().Play("notebook close");
+        //FindAnyObjectByType<AudioManager>().Play("notebook close");
         notebookAnimator.Play("anim_NotebookClose");
         Invoke("FadeInUIButton", .4f);
     }
@@ -80,7 +80,7 @@ public class NotebookManager : MonoBehaviour
     public void NextPage()
     {
         
-        FindAnyObjectByType<AudioManager>().Play("page turn");
+        //FindAnyObjectByType<AudioManager>().Play("page turn");
         pageTurner.SetActive(true);
         pageTurner.GetComponent<Animator>().Play("anim_Pageturn");
         FadeOutUI();
