@@ -5,6 +5,7 @@ using DG.Tweening;
 using UnityEngine.UI;
 using TMPro;
 using UnityEngine.SceneManagement;
+using FMODUnity;
 
 public class NotebookManager : MonoBehaviour
 {
@@ -31,11 +32,10 @@ public class NotebookManager : MonoBehaviour
     public List<PlantData> ListOfPlants;
     public bool IsOpen;
 
-
-
     public void OpenNotebook()
     {
         //FindAnyObjectByType<AudioManager>().Play("notebook open");
+        RuntimeManager.PlayOneShot("event:/FX/Notebook Open");
         notebookAnimator.Play("anim_NotebookOpen");
         openUI.GetComponent<Image>().DOFade(0,.1f);
         pageIndex = 0;
@@ -53,6 +53,7 @@ public class NotebookManager : MonoBehaviour
         }
 
         //FindAnyObjectByType<AudioManager>().Play("notebook close");
+        RuntimeManager.PlayOneShot("event:/FX/Notebook Close");
         notebookAnimator.Play("anim_NotebookClose");
         Invoke("FadeInUIButton", .4f);
     }
@@ -79,8 +80,8 @@ public class NotebookManager : MonoBehaviour
 
     public void NextPage()
     {
-        
         //FindAnyObjectByType<AudioManager>().Play("page turn");
+        RuntimeManager.PlayOneShot("event:/FX/Page Turn");
         pageTurner.SetActive(true);
         pageTurner.GetComponent<Animator>().Play("anim_Pageturn");
         FadeOutUI();
@@ -100,6 +101,7 @@ public class NotebookManager : MonoBehaviour
         {
             if(ListOfPlants[pageIndex].Name=="Dinner With Hubby")
             {
+
                 TriggerEndCutscene();
                 return;
             }
@@ -133,16 +135,30 @@ public class NotebookManager : MonoBehaviour
         {
             textElements[2].text = "Buy Seed";
             newspaper.SetActive(false);
+            textElements[0].gameObject.SetActive(true);
+            textElements[1].gameObject.SetActive(true);
+            textElements[4].gameObject.SetActive(true);
+            textElements[5].gameObject.SetActive(true);
+            textElements[6].gameObject.SetActive(true);
+            textElements[7].gameObject.SetActive(true);
         }
         else
         {
             newspaper.SetActive(true);
             textElements[2].text = "Buy Dinner";
+            textElements[0].gameObject.SetActive(false);
+            textElements[1].gameObject.SetActive(false);
+            textElements[4].gameObject.SetActive(false);
+            textElements[5].gameObject.SetActive(false);
+            textElements[6].gameObject.SetActive(false);
+            textElements[7].gameObject.SetActive(false);
+
         }
 
         descriptiveImage.sprite = plantSprites[pageIndex];
         textElements[0].text = ListOfPlants[pageIndex].Name;
         textElements[1].text = ListOfPlants[pageIndex].Description;
+        textElements[7].text = ListOfPlants[pageIndex].Wants;
     }
 
     public void FadeInUIButton()

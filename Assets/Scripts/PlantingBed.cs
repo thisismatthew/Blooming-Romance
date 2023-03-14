@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using DG.Tweening;
 using TMPro;
+using FMODUnity;
 
 public class PlantingBed : MonoBehaviour
 {
@@ -69,6 +70,7 @@ public class PlantingBed : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.E))
             {
                 //FindAnyObjectByType<AudioManager>().Play("planting");
+                RuntimeManager.PlayOneShot("event:/FX/Planting");
                 hasPlant = true;
                 currentPlant = player.CurrentSeedData;
                 player.HoldingSeed = false;
@@ -126,6 +128,7 @@ public class PlantingBed : MonoBehaviour
         {
             //we are done we can rapture this flower and give the player some money
             //Todo give money and make some kind of animation that pops the flower or something.
+            RuntimeManager.PlayOneShot("event:/FX/Pop Coins");
             FindObjectOfType<NotebookManager>().Money += currentPlant.Yield;
             currentPlant = null;
             hasPlant = false;

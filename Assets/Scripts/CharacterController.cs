@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using FMODUnity;
 
 public enum CharacterState
 {
@@ -89,6 +90,7 @@ public class CharacterController : MonoBehaviour
                     break;
                 case CharacterState.pouring:
                     //FindAnyObjectByType<AudioManager>().Play("watering");
+                    RuntimeManager.PlayOneShot("event:/FX/Watering");
                     if (facingRight) anim.Play("anim_OldWateringRight"); else anim.Play("anim_OldWateringLeft");
                     break;
             }

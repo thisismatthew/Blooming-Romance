@@ -52,6 +52,7 @@ public class JSONLoader : MonoBehaviour
 
             if (raw.Likes != "") { currentPlantImport.Likes.Add(raw.Likes); }
             if (raw.Dislikes != "") { currentPlantImport.Dislikes.Add(raw.Dislikes); }
+            if (raw.Wants != "") { currentPlantImport.Wants = raw.Wants; }
             if (raw.GoodResponses != "") { currentPlantImport.GoodResponses.Add(raw.GoodResponses); }
             if (raw.BadResponses != "") { currentPlantImport.BadResponses.Add(raw.BadResponses); }
             if (raw.Description != "") { currentPlantImport.Description = raw.Description; }

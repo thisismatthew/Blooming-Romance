@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using DG.Tweening;
 using TMPro;
+using Febucci.UI;
 
 
 enum Response
@@ -66,7 +67,7 @@ public class DialogueController : MonoBehaviour
 
         if (playerTurn)
         {
-            
+            InputField.GetComponent<TMP_InputField>().ActivateInputField();
             ResponseText.SetActive(false);
             plantAnim.gameObject.SetActive(false);
             InputField.SetActive(true);
@@ -92,7 +93,7 @@ public class DialogueController : MonoBehaviour
 
             if (!actionTaken)
             {
-                ResponseText.GetComponent<TextMeshProUGUI>().text = plantResponse;
+                ResponseText.GetComponent<TextAnimatorPlayer>().ShowText(plantResponse);
                 switch (activePlant.Name)
                 {
                     case "Daisy":
@@ -111,7 +112,8 @@ public class DialogueController : MonoBehaviour
                         plantAnim.Play("talking_tomato");
                         break;
                 }
-                Invoke("ProcessResponse", 3f);
+                ProcessResponse();
+                Invoke("EndDialogue", 20f);
                 actionTaken = true;
             }
 
@@ -141,7 +143,7 @@ public class DialogueController : MonoBehaviour
                 }
             }
 
-            foreach (string s in activePlant.Dislikes)
+            /*foreach (string s in activePlant.Dislikes)
             {
                 if (w == s)
                 {
@@ -150,14 +152,14 @@ public class DialogueController : MonoBehaviour
                     lastResponceType = Response.bad;
                     return;
                 }
-            }
+            }*/
         }
 
-        //if we're her we did not find good or bad words.
+        //if we're here we did not find good words.
         //lets give a hint?
-
-        plantResponse = "Um, I don't know how to feel about that...";
-        lastResponceType = Response.nuetral;
+        //We're no longer processing nuetral responses - instead any non good response will be treated as bad. 
+        plantResponse = activePlant.BadResponses[Random.Range(0, activePlant.BadResponses.Count - 1)];
+        lastResponceType = Response.bad;
 
     }
 
@@ -169,17 +171,14 @@ public class DialogueController : MonoBehaviour
         {
             case Response.good:
                 activeBed.TriggerGrowth = true;
-                EndDialogue();
                 break;
             case Response.bad:
                 activeBed.ShrivelPlant();
-                EndDialogue();
                 break;
-            case Response.nuetral:
+/*            case Response.nuetral:
                 playerTurn = true;
                 actionTaken = false;
-                break;
-
+                break;*/
         }
     }
 
