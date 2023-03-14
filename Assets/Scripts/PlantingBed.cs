@@ -42,13 +42,13 @@ public class PlantingBed : MonoBehaviour
 
             if (hasPlant && plantGrowthIndex == 0)
             {
-                buttonPrompt.transform.GetChild(0).GetComponentInChildren<TextMeshProUGUI>().text = "q";
+                buttonPrompt.transform.GetChild(0).GetComponentInChildren<TextMeshProUGUI>().text = "B";
                 buttonPrompt.transform.DOScale(1f, .3f);
             }
 
             if (hasPlant && plantGrowthIndex == 2)
             {
-                buttonPrompt.transform.GetChild(0).GetComponentInChildren<TextMeshProUGUI>().text = "e";
+                buttonPrompt.transform.GetChild(0).GetComponentInChildren<TextMeshProUGUI>().text = "A";
                 buttonPrompt.transform.DOScale(1f, .3f);
             }
         }
@@ -60,7 +60,7 @@ public class PlantingBed : MonoBehaviour
         playerInZone = false;
         playerInZoneWithSeed = false;
         buttonPrompt.transform.DOScale(0.001f, .3f);
-        buttonPrompt.transform.GetChild(0).GetComponentInChildren<TextMeshProUGUI>().text = "e";
+        buttonPrompt.transform.GetChild(0).GetComponentInChildren<TextMeshProUGUI>().text = "A";
     }
 
     private void Update()
@@ -75,7 +75,7 @@ public class PlantingBed : MonoBehaviour
                 currentPlant = player.CurrentSeedData;
                 player.HoldingSeed = false;
                 playerInZoneWithSeed = false;
-                buttonPrompt.transform.GetChild(0).GetComponentInChildren<TextMeshProUGUI>().text = "q";
+                buttonPrompt.transform.GetChild(0).GetComponentInChildren<TextMeshProUGUI>().text = "B";
                 childAnim.Play("seed");
             }
         }
@@ -87,7 +87,7 @@ public class PlantingBed : MonoBehaviour
             Debug.Log("pouring!");
             TriggerGrowth = true;
             buttonPrompt.transform.DOScale(.001f, .3f);
-            buttonPrompt.transform.GetChild(0).GetComponentInChildren<TextMeshProUGUI>().text = "e";
+            buttonPrompt.transform.GetChild(0).GetComponentInChildren<TextMeshProUGUI>().text = "A";
         }
 
 
